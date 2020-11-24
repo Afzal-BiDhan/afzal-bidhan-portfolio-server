@@ -6,7 +6,7 @@ require('dotenv').config()
 const cors = require('cors');
 const ObjectId = require('mongodb').ObjectId;
 const MongoClient = require('mongodb').MongoClient;
-const mongodbInfo = `mongodb+srv://Bidhan:Bidhan123AfzaLDiNa@cluster0.pgeao.mongodb.net/afzalPortfolio?retryWrites=true&w=majority`;
+const mongodbInfo = `mongodb+srv://${DB_NAME}:${DB_PASS}@cluster0.pgeao.mongodb.net/afzalPortfolio?retryWrites=true&w=majority`;
 const client = new MongoClient(mongodbInfo, { useNewUrlParser: true, useUnifiedTopology: true });
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
