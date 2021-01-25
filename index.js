@@ -63,7 +63,6 @@ client.connect(err => {
         $set: {
           name: req.body.name,
           image: req.body.image,
-          image: req.body.image,
           imageOne: req.body.imageOne,
           imageTwo: req.body.imageTwo,
           imageThree: req.body.imageThree,
@@ -73,7 +72,9 @@ client.connect(err => {
           technologies: req.body.technologies,
           livePreview: req.body.livePreview,
           sourceCode: req.body.sourceCode,
-          description: req.body.description
+          description: req.body.description,
+          update: req.body.update,
+          updatingDate: req.body.updatingDate
         }
       })
       .then(result => {
@@ -131,5 +132,8 @@ client.connect(err => {
   });
 
 });
+
+// "start": "node index.js",
+//     "start:dev": "nodemon index.js",
 
 app.listen(process.env.PORT || 9000);
