@@ -133,7 +133,4 @@ client.connect(err => {
 
 });
 
-// "start": "node index.js",
-//     "start:dev": "nodemon index.js",
-
 app.listen(process.env.PORT || 9000);
